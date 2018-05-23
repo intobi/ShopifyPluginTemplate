@@ -7,8 +7,9 @@ use App\Http\Controllers\ShopifyOwner\ShopifyOwnerController as Controller;
 
 class HomeController extends Controller
 {
-    function index()
+    public function index()
     {
         return view('shopifyowner.index');
     }
+
 }
