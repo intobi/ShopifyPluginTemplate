@@ -18,8 +18,8 @@ Route::post('/webhook/shop/updated',    'ShopifyWebhookController@shopUpdated') 
 
 Route::group(['namespace' => 'ShopifyOwner'], function () {
 
-    Route::get('/app',              'HomeController@index')                 ->name('backend.index');
-    Route::get('/logout',           'ShopifyOwnerController@logout')        ->name('backend.logout');
+    Route::get('/app',              'HomeController@index')                 ->name('shopifyowner.index');
+    Route::get('/logout',           'ShopifyOwnerController@logout')        ->name('shopifyowner.logout');
 
 });
 

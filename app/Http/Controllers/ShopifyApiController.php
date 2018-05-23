@@ -139,7 +139,7 @@ class ShopifyApiController extends BaseController
             return redirect()->route('shopify.error');
         }
         //redirect after install complete successfully
-        return redirect()->route('backend.index');
+        return redirect()->route('shopifyowner.index');
     }
 
 
