@@ -1,0 +1,137 @@
+
+
+.widget {
+    position: relative;
+    background: #e1eaf9;
+    padding: 30px 35px;
+    margin-bottom: 12px;
+    height: 166px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.widget .title{
+    font-weight: 600;
+}
+
+.widget.compact {
+    height: 126px;
+}
+
+.widget .status {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.widget .status.success {
+    border-color: #00DE18;
+}
+
+.widget .status.warning {
+    border-color: #FF9700;
+}
+
+.widget .status.primary {
+    border-color: #2D6CD3;
+}
+
+.widget .sales {
+    position: absolute;
+    left: 35px;
+    bottom: 30px;
+}
+
+.widget .sales span {
+    margin-top: 5px;
+    display: block;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.widget .sent {
+    position: absolute;
+    right: 35px;
+    bottom: 30px;
+}
+
+.widget .sent span {
+    margin-top: 5px;
+    display: block;
+    font-size: 32px;
+    font-weight: 900;
+    text-align: right;
+}
+
+.widget .number {
+    position: absolute;
+    right: 35px;
+    bottom: 15px;
+    font-size: 31px;
+    font-weight: 900;
+}
+
+.widget .button {
+    position: absolute;
+    right: 17px;
+    bottom: 17px;
+}
+
+.widget .button .btn {
+    border-color: #ffffff;
+    background: #ffffff;
+}
+
+.widget .button .btn:hover, .widget .button .btn:focus {
+    color: #000;
+}
+
+.widget .button-container {
+    width: 107px;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+
+    .edit-widget-container {
+        min-height: 100%;
+    }
+    .edit-widget-container .edit-widget-form {
+        padding: 30px 15px;
+    }
+}
+
+.workspace{
+    font-size: 14px;
+    padding-left: 300px;
+}
+
+.workspace .workspace-title{
+    padding-left: 40px;
+    padding-top: 10px;
+
+    color: #1e07af;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.workspace .workspace-body{
+    padding-left: 20px;
+    padding-top: 10px
+}
+.workspace .workspace-body a{
+    color: unset;
+    text-decoration: unset;
+}
+
+@media (max-width: 767px) {
+    .workspace{
+        padding-left: 0px;
+    }
+}
