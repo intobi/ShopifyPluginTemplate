@@ -13,21 +13,22 @@ Route::get('/shop',                 'ShopifyApiController@getShopData')     ->na
 Route::get('/admin',                'Controller@adminLogin')                ->name('adminLogin');
 
 //shopify webhooks
-Route::post('/webhook/app/uninstalled', ['as' => 'shopify.app.uninstalled', 'uses' => 'ShopifyWebhookController@appUninstalled']);
-Route::post('/webhook/shop/updated', ['as' => 'shopify.shop.updated', 'uses' => 'ShopifyWebhookController@shopUpdated']);
+Route::post('/webhook/app/uninstalled', 'ShopifyWebhookController@appUninstalled')->name('shopify.app.uninstalled');
+Route::post('/webhook/shop/updated',    'ShopifyWebhookController@shopUpdated')   ->name('shopify.shop.updated');
 
 Route::group(['namespace' => 'ShopifyOwner'], function () {
-    Route::get('/app', 'HomeController@index')->name('backend.index');
+
+    Route::get('/app',              'HomeController@index')                 ->name('backend.index');
+    Route::get('/logout',           'ShopifyOwnerController@logout')        ->name('backend.logout');
+
 });
 
 Route::group(['namespace' => 'Admin', 'prefix'=>'admin'], function () {
 
-    Route::get('/dashboard',    'HomeController@dashboard')     ->name('admin.dashboard');
-    Route::get('/logout',       'HomeController@logout')        ->name('admin.logout');
+    Route::get('/dashboard',        'HomeController@dashboard')             ->name('admin.dashboard');
+    Route::get('/logout',           'HomeController@logout')                ->name('admin.logout');
 
 });
-
-
 
 
 Auth::routes();
