@@ -19,7 +19,9 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         //for shopify
-        URL::forceScheme('https');
+        $forceSchema = (env('FORCESCHEMA') !== null) ? env('FORCESCHEMA') : 'https';
+
+        URL::forceScheme($forceSchema);
     }
 
     /**

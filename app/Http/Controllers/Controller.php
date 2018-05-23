@@ -15,4 +15,9 @@ class Controller extends BaseController
     {
         return view('welcome');
     }
+
+    function adminLogin()
+    {
+        return view('adminlogin');
+    }
 }
